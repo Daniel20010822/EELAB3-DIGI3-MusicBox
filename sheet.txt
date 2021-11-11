@@ -1,4 +1,6 @@
-
+# This is a comment
+# Everything excluding music notes are enter keys and #comments
+# Music Title: Heart and Soul
 04do>
 04do>
 02do>
