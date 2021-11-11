@@ -47,6 +47,8 @@ length = {
     "11": "111",
 }
 
+#自行更改音符可以容納的數量
+number_of_notes = 512
 
 with open("sheet.txt", "r") as sheet:
     notes = []
@@ -64,7 +66,7 @@ with open("sheet.txt", "r") as sheet:
 
 with open("song.mif", mode="w") as song:
     song.write("WIDTH=8;\n")
-    song.write("DEPTH=256;\n")
+    song.write("DEPTH={};\n".format(number_of_notes))
     song.write("\n")
     song.write("ADDRESS_RADIX=UNS;\n")
     song.write("DATA_RADIX=BIN;\n")
@@ -74,9 +76,8 @@ with open("song.mif", mode="w") as song:
     for i in range(len(notes)):
         song.write("    {addr}    :    {value};\n".format(addr=i, value=notes[i]))
 
-    if len(notes) < 255:
-        song.write("    [{num}..255]    :    00000000;\n".format(num=len(notes)))
+    if len(notes) < number_of_notes - 1:
+        song.write("    [{start}..{end}]    :    00000000;\n".format(start=len(notes), end=number_of_notes-1))
         song.write("END;")
     else:
         song.write("END;")
-
