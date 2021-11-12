@@ -4,21 +4,22 @@
 由於每輸入一個音就要對音長與音高的表，過程既無聊又繁瑣。藉此開發出簡單的樂譜對照表，可以以較直覺得方式來撰寫樂譜，不僅使用上方便許多，時間上也可以節省許多。
 
 ## 如何使用：
-整份資料裡面有三份資料：
+整份資料裡面有四份資料：
  - MusicSheetConverter.py (樂譜轉換的程式)
- - sheet.txt (轉換前的樂譜)
- - song.mif (轉換後的樂譜，一開始是不會出現的)
+ - sheet1.txt (轉換前的樂譜1)
+ - sheet2.txt (轉換前的樂譜2)
+ - MySong.mif (轉換後的樂譜，一開始是不會出現的)
 
 0. 要先下載python
-1. 將要轉換的樂譜檔名輸入在MusicSheetConverter.py的第5行(這邊以sheet.txt統稱)，輸出mif檔的檔名在第8行
-2. 將MusicSheetConverter.py與sheet.txt放入同一個資料夾裡
-3. 當完成sheet.txt的編輯後，到該資料夾的視窗按住Shift並在視窗的任意空白處點擊右鍵，會出現"在這裡開啟PowerShell視窗"或"在這裡開啟命令視窗"
+1. 將要轉換的兩份樂譜檔名打在MusicSheetConverter.py的第1、2行，輸出mif檔的檔名在第3行更改
+2. 將MusicSheetConverter.py、sheet1.txt、sheet2.txt放入同一個資料夾裡
+3. 當完成sheet1.txt與sheet2.txt的編輯後，到該資料夾的視窗按住Shift並在視窗的任意空白處點擊右鍵，會出現"在這裡開啟PowerShell視窗"或"在這裡開啟命令視窗"
 4. 點擊完成後會出現終端機視窗，檢查目前的路徑對不對(>左邊的一大串)
 5. 確認後在指令列上輸入：
 ```
 py MusicSheetConverter.py
 ```
-這樣轉換後的樂譜就順利做出來了！
+這樣轉換後的合併樂譜就順利做出來了！
 
 ## Sheet.txt如何撰寫：
 ### 音長對照表：
