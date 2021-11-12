@@ -19,7 +19,7 @@
 ```
 py MusicSheetConverter.py
 ```
-這樣轉換後的合併樂譜就順利做出來了！
+這樣轉換後的合併樂譜Mysong.mif就順利做出來了！
 
 ## Sheet.txt如何撰寫：
 ### 音長對照表：
