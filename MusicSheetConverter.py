@@ -1,3 +1,13 @@
+#自行更改音符可以容納的數量
+number_of_notes = 256
+
+# 欲轉換的樂譜檔名
+sheet_filename = "sheet.txt"
+
+# 轉換後的樂譜檔名
+export_filename = "song.mif"
+
+# ---------------------------------------------------------
 # 音高對照表
 pitch = {
     "p" : "00000",
@@ -32,7 +42,7 @@ pitch = {
     "si>"  : "11101",
     "do>>" : "11110",
     "11"   : "11111",
-    # "1"    : "11111",
+    "1"    : "11111",
 }
 
 # 音長對照表
@@ -47,10 +57,7 @@ length = {
     "11": "111",
 }
 
-#自行更改可以容納的音符數量
-number_of_notes = 256
-
-with open("sheet.txt", "r") as sheet:
+with open(sheet_filename, "r") as sheet:
     notes = []
     try:
         for note in sheet.readlines():
@@ -63,8 +70,7 @@ with open("sheet.txt", "r") as sheet:
         print("2. 換行符號(or Enter鍵)")
         print("3. 含 # 的留言")
 
-
-with open("song.mif", mode="w") as song:
+with open(export_filename, mode="w") as song:
     song.write("WIDTH=8;\n")
     song.write("DEPTH={};\n".format(number_of_notes))
     song.write("\n")
@@ -74,10 +80,10 @@ with open("song.mif", mode="w") as song:
     song.write("CONTENT BEGIN\n")
 
     for i in range(len(notes)):
-        song.write("    {addr}    :    {value};\n".format(addr=i, value=notes[i]))
+        song.write(f"    {i : <5}:{notes[i] : >11};\n")
 
     if len(notes) < number_of_notes - 1:
-        song.write("    [{start}..{end}]    :    00000000;\n".format(start=len(notes), end=number_of_notes-1))
+        song.write("    [{start}..{end}]  :   00000000;\n".format(start=len(notes), end=number_of_notes-1))
         song.write("END;")
     else:
         song.write("END;")
