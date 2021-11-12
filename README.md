@@ -10,7 +10,7 @@
  - song.mif (轉換後的樂譜，一開始是不會出現的)
 
 0. 要先下載python
-1. 將要轉換的樂譜檔名輸入在MusicSheetConverter.py的第4行(這邊以sheet.txt統稱)，輸出mif檔的檔名在第6行
+1. 將要轉換的樂譜檔名輸入在MusicSheetConverter.py的第5行(這邊以sheet.txt統稱)，輸出mif檔的檔名在第8行
 2. 將MusicSheetConverter.py與sheet.txt放入同一個資料夾裡
 3. 當完成sheet.txt的編輯後，到該資料夾的視窗按住Shift並在視窗的任意空白處點擊右鍵，會出現"在這裡開啟PowerShell視窗"或"在這裡開啟命令視窗"
 4. 點擊完成後會出現終端機視窗，檢查目前的路徑對不對(>左邊的一大串)
