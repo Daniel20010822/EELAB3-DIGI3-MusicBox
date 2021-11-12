@@ -47,7 +47,7 @@ length = {
     "11": "111",
 }
 
-#自行更改音符可以容納的數量
+#自行更改可以容納的音符數量
 number_of_notes = 256
 
 with open("sheet.txt", "r") as sheet:
