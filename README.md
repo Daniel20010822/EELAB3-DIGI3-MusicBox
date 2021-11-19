@@ -67,5 +67,5 @@ py MusicSheetConverter.py
 4. 如果樂譜超過256個音，在MusicSheetConverter.py的第4行自行更改數量即可
 5. 整份樂譜結束後，輸入1111做為結束符號
 6. 需留意音符後面不能有空白鍵，ex: 04do 
-                                    ^此處
+
 sheet.txt範例可見此儲存庫
